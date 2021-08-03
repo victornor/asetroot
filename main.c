@@ -168,10 +168,8 @@ Pixmap *load_pixmaps_from_images(const Imlib_Image *images, const int amount)
 		imlib_context_set_drawable(*(temp+i));
 		imlib_context_set_image(*(images+i));
 		imlib_render_image_on_drawable(0, 0);
-		imlib_context_set_image(images[i]);
 		imlib_free_image();
-	}
-	return temp;
+	}	return temp;
 }
 
 struct timespec timespec_get_difference(struct timespec start, struct timespec end)
